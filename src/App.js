@@ -22,7 +22,16 @@ const App = () => {
           setRating={setRating}
         />
       </Grid>
-     
+      <Grid item xs={12} md={8} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Map
+          setChildClicked={setChildClicked}
+          setBounds={setBounds}
+          setCoords={setCoords}
+          coords={coords}
+          places={filteredPlaces.length ? filteredPlaces : places}
+          weatherData={weatherData}
+        />
+      </Grid>
     </Grid>
     </>
   );
